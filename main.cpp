@@ -22,25 +22,23 @@ int vector[] = { 3, -5, 7, 10, -4, 14, 5, 2, -13 };
 int n = sizeof(vector) / sizeof(vector[0]);
 
 //creates an int and a pointer
+
+int Smallest, *pointer; 
 //Sets the pointer to the first number  in the array
-int Smallest, *pointer = vector; 
+pointer = vector;
 //sets the smallest int to the pointer
 Smallest = *pointer;
 
-for(int i; i < n; i++)
+for(int i; i <= n; i++)
 {
     //checks for the smallest number
     if(Smallest > *pointer)
     {
-        //moves the pointer to the next number
-        *pointer++;
         //sets new smallest
         Smallest = *pointer;
     }
-    else
-    {
-        *pointer++;
-    }
+    pointer++;
+    
 }
 
 cout << "The smallest number is " << Smallest;
