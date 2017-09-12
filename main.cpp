@@ -30,7 +30,7 @@ Smallest = *pointer;
 for(int i; i < n; i++)
 {
     //checks for the smallest number
-    if(Smallest == *pointer)
+    if(Smallest > *pointer)
     {
         //moves the pointer to the next number
         *pointer++;
